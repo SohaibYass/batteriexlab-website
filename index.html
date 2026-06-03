@@ -105,6 +105,25 @@
     </div>
   </div>
 
+  <!-- ===== Überblick ===== -->
+  <section class="section overview" id="ueberblick">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Auf einen Blick</span>
+        <h2>Das gesamte Leistungsbild in einer Übersicht</h2>
+        <p>Von der Spezifikation über den Prüfstand bis zur normgerechten Verifikation — inklusive Beispiel-Workflows von der Anforderung zum Nachweis.</p>
+      </div>
+      <figure class="overview-figure reveal">
+        <button type="button" class="overview-zoom" data-lightbox="assets/uebersicht.png"
+                aria-label="Leistungsübersicht vergrößern">
+          <img src="assets/uebersicht.png" loading="lazy" width="1536" height="1024"
+               alt="BatterieXLab Leistungsübersicht: die drei Säulen Spezifikation, Prüfstand und Test &amp; Verifikation mit Beispiel-Workflows von der Anforderung zum Nachweis." />
+          <span class="overview-hint">Zum Vergrößern klicken</span>
+        </button>
+      </figure>
+    </div>
+  </section>
+
   <!-- ===== Säulen ===== -->
   <section class="section" id="saeulen">
     <div class="container">
@@ -466,6 +485,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox for the overview graphic -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" aria-label="Schließen">&times;</button>
+    <img src="" alt="" />
+  </div>
 
   <script src="js/main.js"></script>
 </body>

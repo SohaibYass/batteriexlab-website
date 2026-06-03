@@ -105,6 +105,25 @@
     </div>
   </div>
 
+  <!-- ===== Overview ===== -->
+  <section class="section overview" id="overview">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">At a glance</span>
+        <h2>The complete service picture in one overview</h2>
+        <p>From specification through the test bench to standard-compliant verification — including example workflows from requirement to evidence. (Graphic in German.)</p>
+      </div>
+      <figure class="overview-figure reveal">
+        <button type="button" class="overview-zoom" data-lightbox="assets/uebersicht.png"
+                aria-label="Enlarge service overview">
+          <img src="assets/uebersicht.png" loading="lazy" width="1536" height="1024"
+               alt="BatterieXLab service overview: the three pillars Specification, Test Bench and Test &amp; Verification with example workflows from requirement to evidence." />
+          <span class="overview-hint">Click to enlarge</span>
+        </button>
+      </figure>
+    </div>
+  </section>
+
   <!-- ===== Pillars ===== -->
   <section class="section" id="pillars">
     <div class="container">
@@ -466,6 +485,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox for the overview graphic -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="" />
+  </div>
 
   <script src="js/main.js"></script>
 </body>

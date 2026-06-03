@@ -147,6 +147,17 @@ p { margin: 0; }
   color: #fff;
   padding: 96px 0 104px;
 }
+/* Equipment photo layer, revealed on the right; navy overlay keeps left text crisp */
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    linear-gradient(100deg,
+      var(--navy) 30%,
+      rgba(22,36,59,.78) 56%,
+      rgba(22,36,59,.42) 78%,
+      rgba(11,20,34,.55) 100%),
+    url("../assets/hero-lab.jpg") right center / cover no-repeat;
+}
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:
@@ -176,10 +187,11 @@ p { margin: 0; }
 
 /* Hero side card — three pillars preview */
 .hero-card {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(16,27,46,.62);
+  border: 1px solid rgba(255,255,255,.14);
   border-radius: 18px; padding: 26px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 50px rgba(0,0,0,.32);
 }
 .hero-card h3 { color: #fff; font-size: 16px; font-family: var(--sans); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 18px; }
 .hero-pillar { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1); }
@@ -192,6 +204,40 @@ p { margin: 0; }
 }
 .hero-pillar b { color: #fff; font-size: 15.5px; display: block; }
 .hero-pillar small { color: rgba(255,255,255,.62); font-size: 13.5px; }
+
+/* ---------- Overview graphic ---------- */
+.overview { background: var(--bg-alt); }
+.overview-figure { margin: 0 auto; max-width: 1080px; }
+.overview-zoom {
+  display: block; width: 100%; padding: 0; cursor: zoom-in;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; position: relative; box-shadow: var(--shadow-md);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.overview-zoom:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.overview-zoom:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.overview-zoom img { display: block; width: 100%; height: auto; }
+.overview-hint {
+  position: absolute; bottom: 14px; right: 14px;
+  background: rgba(16,27,46,.86); color: #fff;
+  font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .02em;
+  padding: 8px 15px; border-radius: 999px; backdrop-filter: blur(2px);
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(8,14,24,.93);
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 8px; box-shadow: 0 30px 90px rgba(0,0,0,.5); }
+.lightbox-close {
+  position: absolute; top: 14px; right: 22px;
+  background: none; border: 0; color: #fff; font-size: 42px; line-height: 1;
+  cursor: pointer; padding: 6px 12px;
+}
+.lightbox-close:hover { color: var(--yellow); }
 
 /* ---------- Trust strip ---------- */
 .trust { background: var(--navy-900); padding: 22px 0; }
@@ -417,6 +463,15 @@ p { margin: 0; }
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-card { max-width: 480px; }
+  /* Stacked layout: push the photo to the lower area, heavier navy veil for readability */
+  .hero::before {
+    background:
+      linear-gradient(180deg,
+        var(--navy) 32%,
+        rgba(22,36,59,.82) 58%,
+        rgba(22,36,59,.55) 100%),
+      url("../assets/hero-lab.jpg") center bottom / cover no-repeat;
+  }
   .pillars { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
   .pkg-grid { grid-template-columns: 1fr 1fr; }
   .addons { grid-template-columns: 1fr 1fr; }

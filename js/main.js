@@ -41,6 +41,38 @@
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
 
+  // Lightbox for the overview graphic
+  var lightbox = document.getElementById("lightbox");
+  if (lightbox) {
+    var lbImg = lightbox.querySelector("img");
+    var lbClose = lightbox.querySelector(".lightbox-close");
+    var openLightbox = function (src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || "";
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      lbClose.focus();
+    };
+    var closeLightbox = function () {
+      lightbox.hidden = true;
+      lbImg.src = "";
+      document.body.style.overflow = "";
+    };
+    document.querySelectorAll("[data-lightbox]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var img = el.querySelector("img");
+        openLightbox(el.getAttribute("data-lightbox"), img ? img.alt : "");
+      });
+    });
+    lbClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  }
+
   // Contact form — submit via fetch, show inline status (no page reload).
   var form = document.getElementById("contactForm");
   if (form) {
