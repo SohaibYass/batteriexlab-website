@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="BxL">
+  <rect x="0" y="0" width="100" height="100" rx="20" fill="#16243B"/>
+  <text x="50" y="52" text-anchor="middle" dominant-baseline="central"
+        font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="52" letter-spacing="-2">
+    <tspan fill="#FFFFFF">B</tspan><tspan fill="#FFB627" font-size="42" dy="2">x</tspan><tspan fill="#FFFFFF" dy="-2">L</tspan>
+  </text>
+</svg>

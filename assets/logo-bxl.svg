@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="BatterieXLab">
+  <rect x="2" y="2" width="96" height="96" rx="18" fill="#16243B"/>
+  <rect x="2" y="2" width="96" height="96" rx="18" fill="none" stroke="#FFB627" stroke-width="2.5"/>
+  <text x="50" y="50" text-anchor="middle" dominant-baseline="central"
+        font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="46" letter-spacing="-1">
+    <tspan fill="#FFFFFF">B</tspan><tspan fill="#FFB627" font-size="38" dy="2">x</tspan><tspan fill="#FFFFFF" dy="-2">L</tspan>
+  </text>
+</svg>
