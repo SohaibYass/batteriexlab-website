@@ -47,6 +47,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 h1,h2,h3,h4 { margin: 0; font-family: var(--serif); font-weight: 700; line-height: 1.15; color: var(--navy); letter-spacing: -.01em; }
 p { margin: 0; }
 
+/* Refined ampersand: clean system serif "&" everywhere (no Playfair — avoids the
+   ornate Playfair ampersand and the font-swap flash). */
+.amp { font-family: Georgia, "Times New Roman", "Times", serif; font-style: normal; font-weight: 600; font-size: 1.04em; letter-spacing: 0; }
+
 /* ---------- Layout ---------- */
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .section { padding: 92px 0; }
