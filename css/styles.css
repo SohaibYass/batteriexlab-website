@@ -201,10 +201,8 @@ p { margin: 0; }
 .hero-pillar { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1); }
 .hero-pillar:first-of-type { border-top: 0; }
 .hero-pillar .n {
-  flex: none; width: 34px; height: 34px; border-radius: 50%;
-  background: var(--yellow); color: var(--navy-900);
-  font-family: var(--serif); font-weight: 700; font-size: 17px;
-  display: flex; align-items: center; justify-content: center;
+  flex: none; width: 11.4px; height: 11.4px; border-radius: 50%;
+  background: var(--yellow); margin-top: 6px;
 }
 .hero-pillar b { color: #fff; font-size: 15.5px; display: block; }
 .hero-pillar small { color: rgba(255,255,255,.62); font-size: 13.5px; }
