@@ -291,12 +291,11 @@ p { margin: 0; }
   font-weight: 700; font-size: 14px; padding: 11px; border-radius: 999px;
 }
 
-.io-flow { margin-top: 16px; }
-.io-flow .io { display: flex; gap: 10px; font-size: 13.5px; padding: 9px 12px; border-radius: 8px; }
-.io-flow .io b { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); flex: none; width: 56px; padding-top: 2px;}
-.io-flow .io.in { background: var(--bg-soft); }
-.io-flow .io.out { background: #FFF6E3; }
-.io-flow .arrow { text-align: center; color: var(--yellow-600); font-size: 18px; line-height: 1; margin: 4px 0; }
+.io-flow { margin-top: 18px; }
+.io-flow .io { display: block; font-size: 15px; padding: 0; margin-top: 14px; background: none; border-radius: 0; }
+.io-flow .io b { display: block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); width: auto; margin-bottom: 4px; }
+.io-flow .io span { color: var(--ink); }
+.io-flow .arrow { display: none; }
 
 /* ---------- Packages ---------- */
 .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
