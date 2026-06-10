@@ -248,9 +248,9 @@ p { margin: 0; }
 .trust .dot { color: var(--yellow); }
 
 /* ---------- Pillars ---------- */
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(5, auto); column-gap: 26px; row-gap: 0; }
 .pillar {
-  display: flex; flex-direction: column;
+  display: grid; grid-row: span 5; grid-template-rows: subgrid;
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   overflow: hidden; box-shadow: var(--shadow-sm);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
@@ -269,7 +269,7 @@ p { margin: 0; }
 .pillar-top .kicker { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--yellow); }
 .pillar-top h3 { color: #fff; font-size: 24px; margin-top: 4px; }
 .pillar-top .promise { margin-top: 12px; font-style: italic; color: rgba(255,255,255,.78); font-size: 15px; }
-.pillar-body { padding: 24px 26px 8px; flex: 1; display: flex; flex-direction: column; }
+.pillar-body { padding: 24px 26px 8px; }
 .pillar-body .label { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .pillar-body p.desc { color: var(--ink); font-size: 15.5px; margin-bottom: 18px; }
 .feature-list li {
@@ -291,7 +291,7 @@ p { margin: 0; }
   font-weight: 700; font-size: 14px; padding: 11px; border-radius: 999px;
 }
 
-.io-flow { margin-top: auto; padding-top: 18px; }
+.io-flow { grid-row: span 2; display: grid; grid-template-rows: subgrid; padding: 0 26px 6px; }
 .io-flow .io { display: block; font-size: 15px; padding: 0; margin-top: 14px; background: none; border-radius: 0; }
 .io-flow .io b { display: block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); width: auto; margin-bottom: 4px; }
 .io-flow .io span { color: var(--ink); }
@@ -473,7 +473,9 @@ p { margin: 0; }
         rgba(22,36,59,.55) 100%),
       url("../assets/hero-lab.jpg") center bottom / cover no-repeat;
   }
-  .pillars { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .pillars { grid-template-columns: 1fr; grid-template-rows: none; max-width: 520px; margin: 0 auto; }
+  .pillar { display: flex; flex-direction: column; grid-row: auto; }
+  .io-flow { display: block; }
   .pkg-grid { grid-template-columns: 1fr 1fr; }
   .addons { grid-template-columns: 1fr 1fr; }
   .diff-grid { grid-template-columns: 1fr; }
