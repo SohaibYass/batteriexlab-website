@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=20260610b" />
+  <link rel="stylesheet" href="css/styles.css?v=20260610c" />
 </head>
 <body>
 
@@ -138,7 +138,7 @@
             <ul class="feature-list">
               <li>Requirements engineering</li>
               <li>Test-case derivation</li>
-              <li>Standards coverage <span class="amp">&amp;</span> traceability (ASPICE)</li>
+              <li>Standards coverage and traceability (ASPICE)</li>
               <li>Gap analyses of existing test catalogues</li>
             </ul>
           </div>
@@ -162,11 +162,12 @@
         </article>
 
         <!-- Pillar 2 -->
-        <article class="pillar reveal">
+        <article class="pillar reveal pillar--clickable" data-drawer-open="drawer-s2" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Pillar 2 – Test Bench: view details">
           <div class="pillar-top">
             <span class="kicker">Pillar 2</span>
             <h3>Test Bench</h3>
             <p class="promise">“We build what tests it.”</p>
+            <span class="pillar-more" aria-hidden="true">View details</span>
           </div>
           <div class="pillar-body">
             <p class="label">What we deliver</p>
@@ -177,10 +178,10 @@
             </ul>
             <p class="label">Services</p>
             <ul class="feature-list bullets-circle">
-              <li>Concept <span class="amp">&amp;</span> planning</li>
+              <li>Concept and planning</li>
               <li>Hardware build</li>
               <li>Software development (test executive)</li>
-              <li>Commissioning (IQ/OQ/PQ) <span class="amp">&amp;</span> training</li>
+              <li>Commissioning (IQ/OQ/PQ) and training</li>
             </ul>
           </div>
           <div class="io-flow">
@@ -189,7 +190,7 @@
                 <li>Technical test specification</li>
                 <li>Test units</li>
                 <li>Requirements</li>
-                <li>Boundary <span class="amp">&amp;</span> environmental conditions</li>
+                <li>Boundary and environmental conditions</li>
               </ul>
             </div>
             <div class="io out"><b>Output</b>
@@ -208,7 +209,7 @@
         <article class="pillar reveal">
           <div class="pillar-top">
             <span class="kicker">Pillar 3</span>
-            <h3>Test <span class="amp">&amp;</span> Verification</h3>
+            <h3>Test and Verification</h3>
             <p class="promise">“We prove that it works.”</p>
           </div>
           <div class="pillar-body">
@@ -221,9 +222,9 @@
             <p class="label">Services</p>
             <ul class="feature-list">
               <li>Test execution (functional safety, cybersecurity)</li>
-              <li>Statistical evaluation <span class="amp">&amp;</span> reporting</li>
+              <li>Statistical evaluation and reporting</li>
               <li>Traceability per ASPICE</li>
-              <li>Institute support <span class="amp">&amp;</span> witness testing</li>
+              <li>Institute support and witness testing</li>
             </ul>
           </div>
           <div class="io-flow">
@@ -510,6 +511,101 @@
     <img src="" alt="" />
   </div>
 
-  <script src="js/main.js?v=20260610"></script>
+  <!-- ===== Pillar 2 details drawer ===== -->
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="drawer-s2" role="dialog" aria-modal="true" aria-labelledby="drawer-s2-title" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="kicker">Pillar 2 · Test Bench</span>
+      <button type="button" class="drawer-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <h2 id="drawer-s2-title">Test Bench</h2>
+      <p class="drawer-promise">“We build what tests it.”</p>
+
+      <section class="drawer-section">
+        <h3>What we deliver</h3>
+        <p>We design and deliver custom test benches for cells, modules, battery packs and BMS systems. Our solutions cover all relevant test types — from EOL (End-of-Line) through HIL (Hardware-in-the-Loop) to DV/PV validation and characterisation. Depending on requirements, we build test benches as fully automated industrial systems or flexible manual test setups.</p>
+      </section>
+
+      <section class="drawer-section">
+        <h3>Services</h3>
+
+        <div class="drawer-item">
+          <h4>Concept and planning</h4>
+          <p>We develop test-bench solutions from the ground up, tailored to your technical, process and regulatory requirements. This includes requirement specifications, architecture design, interface concepts and the definition of the entire test strategy. The goal is a scalable, robust and future-proof system architecture.</p>
+        </div>
+
+        <div class="drawer-item">
+          <h4>Hardware build</h4>
+          <p>We handle the complete mechanical and electrical build of the test-bench infrastructure. This includes:</p>
+          <ul class="feature-list bullets-circle">
+            <li>Construction of test-station structures</li>
+            <li>High-quality, standards-compliant wiring (signal, power, data)</li>
+            <li>Integration of safety concepts (emergency stop, interlocks, protection systems)</li>
+            <li>EMC-compliant design and industrial robustness</li>
+          </ul>
+          <p>The result is operationally safe systems for continuous operation.</p>
+        </div>
+
+        <div class="drawer-item">
+          <h4>Software development (test executive)</h4>
+          <p>We develop powerful test software to control, automate and evaluate your test processes. The software handles:</p>
+          <ul class="feature-list bullets-circle">
+            <li>Fully automated test sequences (sequencing, control, logging)</li>
+            <li>Control of measurement devices, loads and BMS components</li>
+            <li>Real-time data acquisition and monitoring</li>
+            <li>Interfaces to databases and MES/cloud systems</li>
+            <li>Reproducible test cycles for series and validation testing</li>
+          </ul>
+          <p>The focus is on stability, scalability and ease of use.</p>
+        </div>
+
+        <div class="drawer-item">
+          <h4>Commissioning (IQ/OQ/PQ) and training</h4>
+          <p>We support the complete commissioning of your system through to productive use. We carry out:</p>
+          <ul class="feature-list bullets-circle">
+            <li><b>IQ</b> (Installation Qualification): verification of correct installation of all components</li>
+            <li><b>OQ</b> (Operational Qualification): functional tests under defined operating conditions</li>
+            <li><b>PQ</b> (Performance Qualification): validation of performance in real-world use</li>
+          </ul>
+          <p>In addition, we provide comprehensive training for your team in operation, maintenance and fault analysis to ensure safe and efficient operation.</p>
+        </div>
+      </section>
+
+      <section class="drawer-section drawer-io">
+        <h3>Input and Output</h3>
+        <div class="drawer-io-grid">
+          <div>
+            <p class="label">Input</p>
+            <p>For project implementation we need:</p>
+            <ul class="feature-list bullets-circle">
+              <li>Technical test specification</li>
+              <li>Test units (cells, modules, packs or BMS)</li>
+              <li>Requirements for quantity, cycle time and degree of automation</li>
+              <li>Boundary conditions such as standards, interfaces and environmental conditions</li>
+            </ul>
+            <p class="drawer-note">The input can come either from the customer or from Package S1, which is combined with Package S2. Our team takes care of all the topics listed above.</p>
+          </div>
+          <div>
+            <p class="label">Output</p>
+            <p>In the end you receive a fully validated system:</p>
+            <ul class="feature-list bullets-circle">
+              <li>Handover-ready test bench incl. documentation</li>
+              <li>Acceptance per IQ/OQ/PQ standards</li>
+              <li>MSA (measurement system analysis) to ensure measurement quality</li>
+              <li>Training materials and training for your team</li>
+              <li>Data structure for clean test-data processing and analysis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="drawer-cta">
+        <a href="#contact" class="btn btn--primary" data-drawer-close>Discuss your project</a>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/main.js?v=20260610c"></script>
 </body>
 </html>

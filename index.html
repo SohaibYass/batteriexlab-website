@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=20260610b" />
+  <link rel="stylesheet" href="css/styles.css?v=20260610c" />
 </head>
 <body>
 
@@ -137,7 +137,7 @@
             <ul class="feature-list">
               <li>Requirements Engineering</li>
               <li>Testcase-Ableitung</li>
-              <li>Normabdeckung <span class="amp">&amp;</span> Traceability (ASPICE)</li>
+              <li>Normabdeckung und Traceability (ASPICE)</li>
               <li>Gap-Analysen bestehender Testkataloge</li>
             </ul>
           </div>
@@ -161,11 +161,12 @@
         </article>
 
         <!-- Säule 2 -->
-        <article class="pillar reveal">
+        <article class="pillar reveal pillar--clickable" data-drawer-open="drawer-s2" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Säule 2 – Prüfstand: Details ansehen">
           <div class="pillar-top">
             <span class="kicker">Säule 2</span>
             <h3>Prüfstand</h3>
             <p class="promise">„Wir bauen, womit geprüft wird.“</p>
+            <span class="pillar-more" aria-hidden="true">Details ansehen</span>
           </div>
           <div class="pillar-body">
             <p class="label">Was wir liefern</p>
@@ -176,10 +177,10 @@
             </ul>
             <p class="label">Leistungen</p>
             <ul class="feature-list bullets-circle">
-              <li>Konzeption <span class="amp">&amp;</span> Planung</li>
+              <li>Konzeption und Planung</li>
               <li>Hardware-Aufbau</li>
               <li>Software-Entwicklung (Test-Executive)</li>
-              <li>Inbetriebnahme (IQ/OQ/PQ) <span class="amp">&amp;</span> Schulung</li>
+              <li>Inbetriebnahme (IQ/OQ/PQ) und Schulung</li>
             </ul>
           </div>
           <div class="io-flow">
@@ -188,7 +189,7 @@
                 <li>Technische Testspezifikation</li>
                 <li>Prüflinge</li>
                 <li>Anforderungen</li>
-                <li>Rahmenbedingungen <span class="amp">&amp;</span> Umgebungsbedingungen</li>
+                <li>Rahmenbedingungen und Umgebungsbedingungen</li>
               </ul>
             </div>
             <div class="io out"><b>Output</b>
@@ -207,7 +208,7 @@
         <article class="pillar reveal">
           <div class="pillar-top">
             <span class="kicker">Säule 3</span>
-            <h3>Test <span class="amp">&amp;</span> Verifikation</h3>
+            <h3>Test und Verifikation</h3>
             <p class="promise">„Wir weisen nach, dass es funktioniert.“</p>
           </div>
           <div class="pillar-body">
@@ -220,9 +221,9 @@
             <p class="label">Leistungen</p>
             <ul class="feature-list">
               <li>Testdurchführung (FuSa, Cybersecurity)</li>
-              <li>Statistische Auswertung <span class="amp">&amp;</span> Reporting</li>
+              <li>Statistische Auswertung und Reporting</li>
               <li>Traceability nach ASPICE</li>
-              <li>Institutsbegleitung <span class="amp">&amp;</span> Witness Testing</li>
+              <li>Institutsbegleitung und Witness Testing</li>
             </ul>
           </div>
           <div class="io-flow">
@@ -509,6 +510,101 @@
     <img src="" alt="" />
   </div>
 
-  <script src="js/main.js?v=20260610"></script>
+  <!-- ===== Säule 2 details drawer ===== -->
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="drawer-s2" role="dialog" aria-modal="true" aria-labelledby="drawer-s2-title" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="kicker">Säule 2 · Prüfstand</span>
+      <button type="button" class="drawer-close" aria-label="Schließen">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <h2 id="drawer-s2-title">Prüfstand</h2>
+      <p class="drawer-promise">„Wir bauen, womit geprüft wird.“</p>
+
+      <section class="drawer-section">
+        <h3>Was wir liefern</h3>
+        <p>Wir entwickeln und liefern maßgeschneiderte Prüfstände für Zellen, Module, Batteriepacks und BMS-Systeme. Unsere Lösungen decken alle relevanten Testarten ab — von EOL (End-of-Line) über HIL (Hardware-in-the-Loop) bis hin zu DV/PV-Validierung und Charakterisierung. Je nach Anforderung realisieren wir Prüfstände als vollautomatisierte Industrieanlagen oder flexible manuelle Testsysteme.</p>
+      </section>
+
+      <section class="drawer-section">
+        <h3>Leistungen</h3>
+
+        <div class="drawer-item">
+          <h4>Konzeption und Planung</h4>
+          <p>Wir entwickeln Prüfstandslösungen von Grund auf, abgestimmt auf Ihre technischen, prozessualen und normativen Anforderungen. Dazu gehören Lastenhefte, Architekturdesign, Schnittstellenkonzepte sowie die Definition der gesamten Teststrategie. Ziel ist eine skalierbare, robuste und zukunftssichere Systemarchitektur.</p>
+        </div>
+
+        <div class="drawer-item">
+          <h4>Hardware-Aufbau</h4>
+          <p>Wir übernehmen den kompletten mechanischen und elektrischen Aufbau der Prüfstandsinfrastruktur. Dazu zählen:</p>
+          <ul class="feature-list bullets-circle">
+            <li>Aufbau von Prüfplatzstrukturen</li>
+            <li>Hochwertige und normgerechte Verdrahtung (Signal, Leistung, Daten)</li>
+            <li>Integration von Sicherheitskonzepten (Not-Aus, Interlocks, Schutzsysteme)</li>
+            <li>EMV-gerechte Auslegung und industrielle Robustheit</li>
+          </ul>
+          <p>Das Ergebnis sind betriebssichere Systeme für den Dauerbetrieb.</p>
+        </div>
+
+        <div class="drawer-item">
+          <h4>Software-Entwicklung (Test-Executive)</h4>
+          <p>Wir entwickeln leistungsfähige Testsoftware zur Steuerung, Automatisierung und Auswertung Ihrer Prüfprozesse. Die Software übernimmt:</p>
+          <ul class="feature-list bullets-circle">
+            <li>Vollautomatische Testabläufe (Sequencing, Steuerung, Logging)</li>
+            <li>Ansteuerung von Messgeräten, Lasten und BMS-Komponenten</li>
+            <li>Echtzeit-Datenerfassung und Monitoring</li>
+            <li>Schnittstellen zu Datenbanken und MES-/Cloud-Systemen</li>
+            <li>Reproduzierbare Testzyklen für Serien- und Validierungstests</li>
+          </ul>
+          <p>Fokus liegt auf Stabilität, Skalierbarkeit und einfacher Bedienbarkeit.</p>
+        </div>
+
+        <div class="drawer-item">
+          <h4>Inbetriebnahme (IQ/OQ/PQ) und Schulung</h4>
+          <p>Wir begleiten die vollständige Inbetriebnahme Ihrer Anlage bis zur produktiven Nutzung. Dabei führen wir durch:</p>
+          <ul class="feature-list bullets-circle">
+            <li><b>IQ</b> (Installation Qualification): Prüfung der korrekten Installation aller Komponenten</li>
+            <li><b>OQ</b> (Operational Qualification): Funktionstests unter definierten Betriebsbedingungen</li>
+            <li><b>PQ</b> (Performance Qualification): Validierung der Leistungsfähigkeit im realen Einsatz</li>
+          </ul>
+          <p>Zusätzlich schulen wir Ihr Team umfassend in Bedienung, Wartung und Fehleranalyse, um einen sicheren und effizienten Betrieb zu gewährleisten.</p>
+        </div>
+      </section>
+
+      <section class="drawer-section drawer-io">
+        <h3>Input und Output</h3>
+        <div class="drawer-io-grid">
+          <div>
+            <p class="label">Input</p>
+            <p>Für die Projektumsetzung benötigen wir:</p>
+            <ul class="feature-list bullets-circle">
+              <li>Technische Testspezifikation</li>
+              <li>Prüflinge (Zellen, Module, Packs oder BMS)</li>
+              <li>Anforderungen an Stückzahl, Taktzeit und Automatisierungsgrad</li>
+              <li>Rahmenbedingungen wie Normen, Schnittstellen und Umgebungsbedingungen</li>
+            </ul>
+            <p class="drawer-note">Der Input kann entweder vom Kunden kommen oder aus Paket S1 stammen, das mit Paket S2 kombiniert wird. Unser Team kümmert sich um alle oben genannten Themen.</p>
+          </div>
+          <div>
+            <p class="label">Output</p>
+            <p>Am Ende erhalten Sie ein vollständig validiertes System:</p>
+            <ul class="feature-list bullets-circle">
+              <li>Übergabefertiger Prüfstand inkl. Dokumentation</li>
+              <li>Abnahme nach IQ/OQ/PQ-Standards</li>
+              <li>MSA (Messsystemanalyse) zur Sicherstellung der Messqualität</li>
+              <li>Schulungsunterlagen und Training für Ihr Team</li>
+              <li>Datenstruktur für saubere Testdatenverarbeitung und Analyse</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="drawer-cta">
+        <a href="#kontakt" class="btn btn--primary" data-drawer-close>Projekt besprechen</a>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/main.js?v=20260610c"></script>
 </body>
 </html>

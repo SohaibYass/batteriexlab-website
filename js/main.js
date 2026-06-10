@@ -73,6 +73,53 @@
     });
   }
 
+  // Detail drawer (slide-over panel)
+  var drawerOverlay = document.getElementById("drawer-overlay");
+  if (drawerOverlay) {
+    var openDrawerEl = null;
+    var lastFocus = null;
+    var openDrawer = function (drawer) {
+      lastFocus = document.activeElement;
+      openDrawerEl = drawer;
+      drawerOverlay.hidden = false;
+      void drawerOverlay.offsetWidth; // reflow so the transition runs
+      drawerOverlay.classList.add("show");
+      drawer.classList.add("open");
+      drawer.setAttribute("aria-hidden", "false");
+      document.body.classList.add("drawer-open");
+      var closeBtn = drawer.querySelector(".drawer-close");
+      if (closeBtn) closeBtn.focus();
+    };
+    var closeDrawer = function () {
+      if (!openDrawerEl) return;
+      var d = openDrawerEl;
+      openDrawerEl = null;
+      d.classList.remove("open");
+      d.setAttribute("aria-hidden", "true");
+      drawerOverlay.classList.remove("show");
+      document.body.classList.remove("drawer-open");
+      window.setTimeout(function () {
+        if (!openDrawerEl) drawerOverlay.hidden = true;
+      }, 300);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+    document.querySelectorAll("[data-drawer-open]").forEach(function (trigger) {
+      var drawer = document.getElementById(trigger.getAttribute("data-drawer-open"));
+      if (!drawer) return;
+      trigger.addEventListener("click", function () { openDrawer(drawer); });
+      trigger.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDrawer(drawer); }
+      });
+    });
+    document.querySelectorAll(".drawer-close, [data-drawer-close]").forEach(function (btn) {
+      btn.addEventListener("click", closeDrawer);
+    });
+    drawerOverlay.addEventListener("click", closeDrawer);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && openDrawerEl) closeDrawer();
+    });
+  }
+
   // Contact form — submit via fetch, show inline status (no page reload).
   var form = document.getElementById("contactForm");
   if (form) {
