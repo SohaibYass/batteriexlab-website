@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=20260610" />
+  <link rel="stylesheet" href="css/styles.css?v=20260610b" />
 </head>
 <body>
 
@@ -128,7 +128,11 @@
           </div>
           <div class="pillar-body">
             <p class="label">Was wir liefern</p>
-            <p class="desc">Prüffähige, normkonforme Testspezifikationen — intern verwendbar oder zur Übergabe an ein akkreditiertes Prüfinstitut.</p>
+            <p class="desc">Prüffähige, normkonforme Testspezifikationen.</p>
+            <ul class="feature-list">
+              <li>intern verwendbar</li>
+              <li>zur Übergabe an akkreditierte Prüfinstitute</li>
+            </ul>
             <p class="label">Leistungen</p>
             <ul class="feature-list">
               <li>Requirements Engineering</li>
@@ -138,8 +142,20 @@
             </ul>
           </div>
           <div class="io-flow">
-            <div class="io in"><b>Input</b><span>Kundenanforderungen, Normenliste, Anwendungsfall, Prüfling-Beschreibung</span></div>
-            <div class="io out"><b>Output</b><span>Testspezifikations-Paket (ReqIF/DOORS/Polarion) + Traceability-Matrix</span></div>
+            <div class="io in"><b>Input</b>
+              <ul class="feature-list">
+                <li>Kundenanforderungen</li>
+                <li>Normenliste</li>
+                <li>Anwendungsfall</li>
+                <li>Prüfling-Beschreibung</li>
+              </ul>
+            </div>
+            <div class="io out"><b>Output</b>
+              <ul class="feature-list">
+                <li>Testspezifikations-Paket (ReqIF/DOORS/Polarion)</li>
+                <li>Traceability-Matrix</li>
+              </ul>
+            </div>
           </div>
           <div class="pillar-foot"><span class="pillar-tag">Einzeln buchbar als „Paket S1“</span></div>
         </article>
@@ -147,24 +163,42 @@
         <!-- Säule 2 -->
         <article class="pillar reveal">
           <div class="pillar-top">
-            <span class="kicker">Säule 2 · Hardware / Software</span>
+            <span class="kicker">Säule 2</span>
             <h3>Prüfstand</h3>
             <p class="promise">„Wir bauen, womit geprüft wird.“</p>
           </div>
           <div class="pillar-body">
             <p class="label">Was wir liefern</p>
-            <p class="desc">Prüfstände für Zellen, Module, Packs und BMS — EoL, HiL, DV/PV, Charakterisierung. Automatisiert oder manuell.</p>
+            <p class="desc">Individuelle Prüfstände für Batterie- und BMS-Systeme.</p>
+            <ul class="feature-list bullets-circle">
+              <li>Von EOL bis zur Validierung</li>
+              <li>Manuell oder automatisiert</li>
+            </ul>
             <p class="label">Leistungen</p>
-            <ul class="feature-list">
+            <ul class="feature-list bullets-circle">
               <li>Konzeption <span class="amp">&amp;</span> Planung</li>
-              <li>HW-Aufbau (Rack, Verkabelung, Sicherheit)</li>
-              <li>SW-Entwicklung (Test-Executive)</li>
+              <li>Hardware-Aufbau</li>
+              <li>Software-Entwicklung (Test-Executive)</li>
               <li>Inbetriebnahme (IQ/OQ/PQ) <span class="amp">&amp;</span> Schulung</li>
             </ul>
           </div>
           <div class="io-flow">
-            <div class="io in"><b>Input</b><span>Testspezifikation (eigene oder fremde) + Prüfling + Anforderungen an Stückzahl/Taktzeit</span></div>
-            <div class="io out"><b>Output</b><span>Übergabefertiger Prüfstand + IQ/OQ/PQ + MSA + Schulung (Daten: ASAM MDF/MF4)</span></div>
+            <div class="io in"><b>Input</b>
+              <ul class="feature-list bullets-circle">
+                <li>Technische Testspezifikation</li>
+                <li>Prüflinge</li>
+                <li>Anforderungen</li>
+                <li>Rahmenbedingungen <span class="amp">&amp;</span> Umgebungsbedingungen</li>
+              </ul>
+            </div>
+            <div class="io out"><b>Output</b>
+              <ul class="feature-list bullets-circle">
+                <li>Übergabefertiger Prüfstand inkl. Dokumentation</li>
+                <li>MSA (Messsystemanalyse)</li>
+                <li>Schulungsunterlagen</li>
+                <li>Saubere Testdatenverarbeitung und Analyse</li>
+              </ul>
+            </div>
           </div>
           <div class="pillar-foot"><span class="pillar-tag">Einzeln buchbar als „Paket S2“</span></div>
         </article>
@@ -178,7 +212,11 @@
           </div>
           <div class="pillar-body">
             <p class="label">Was wir liefern</p>
-            <p class="desc">Testdurchführung, Datenanalyse und belastbare Verifikationsnachweise — inkl. Begleitung externer Prüfungen.</p>
+            <p class="desc">Belastbare Verifikationsnachweise für HV-Batterien und BMS.</p>
+            <ul class="feature-list">
+              <li>Testdurchführung und Datenanalyse</li>
+              <li>inkl. Begleitung externer Prüfungen</li>
+            </ul>
             <p class="label">Leistungen</p>
             <ul class="feature-list">
               <li>Testdurchführung (FuSa, Cybersecurity)</li>
@@ -188,8 +226,21 @@
             </ul>
           </div>
           <div class="io-flow">
-            <div class="io in"><b>Input</b><span>Testspezifikation + Prüfstand (eigener oder fremder) + Prüfling</span></div>
-            <div class="io out"><b>Output</b><span>Testberichte + Verifikationsnachweis + Traceability-Matrix + Homologations-Dossier</span></div>
+            <div class="io in"><b>Input</b>
+              <ul class="feature-list">
+                <li>Testspezifikation</li>
+                <li>Prüfstand (eigener oder fremder)</li>
+                <li>Prüfling</li>
+              </ul>
+            </div>
+            <div class="io out"><b>Output</b>
+              <ul class="feature-list">
+                <li>Testberichte</li>
+                <li>Verifikationsnachweis</li>
+                <li>Traceability-Matrix</li>
+                <li>Homologations-Dossier</li>
+              </ul>
+            </div>
           </div>
           <div class="pillar-foot"><span class="pillar-tag">Einzeln buchbar als „Paket S3“</span></div>
         </article>
